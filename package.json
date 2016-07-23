@@ -1,9 +1,9 @@
 {
-  "name": "vue-webpack-boilerplate",
+  "name": "vue-boilerplate",
   "description": "A Webpack boilerplate with vue-loader,vue-resource and vue-router",
   "author": "re-fort",
   "scripts": {
-    "dev": "webpack-dev-server --inline --hot",
+    "dev": "webpack-dev-server --inline --hot --port 3000",
     "build": "npm run clean && cross-env NODE_ENV=production webpack --progress --hide-modules",
     "clean": "rimraf ./dist"
   },
