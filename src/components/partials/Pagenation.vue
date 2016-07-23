@@ -2,11 +2,11 @@
   .columns(v-show="pageCount")
     .column.is-6.is-offset-3
       nav.pagination
-        a.button(:class="isStartPage ? 'is-disabled' : ''" @click="showPrev") &#60;&#60; Prev
-        a.button(:class="isEndPage ? 'is-disabled' : ''" @click="showNext") Next &#62;&#62;
+        a.button(class="isStartPage ? 'is-disabled' : ''" @click="showPrev") &#60;&#60; Prev
+        a.button(class="isEndPage ? 'is-disabled' : ''" @click="showNext") Next &#62;&#62;
         ul
           li(v-for="i in pageCount")
-            a.button(:class="i == page ? 'is-primary' : ''" @click="showPage(i)") {{ i + 1 }}
+            a.button(class="i == page ? 'is-primary' : ''" @click="showPage(i)") {{ i + 1 }}
 </template>
 
 <script>

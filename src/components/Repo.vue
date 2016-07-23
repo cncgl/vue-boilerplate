@@ -4,7 +4,7 @@
       .column.is-4.is-offset-4
         p.control.has-addons
           input.input.is-expanded(v-model="query" type="text" placeholder="Find a repo" @keyup.enter="searchRepo")
-          a.button.is-primary(:class="isLoading ? 'is-loading' : ''" @click="searchRepo") Search
+          a.button.is-primary(class="isLoading ? 'is-loading' : ''" @click="searchRepo") Search
     template(v-if="message")
       .columns
         .column.is-6.is-offset-3
@@ -18,9 +18,9 @@
               img(:src="repo.owner.avatar_url")
           .media-content
             .content
-              a(:href="repo.html_url" target="_blank") {{ repo.full_name }}
+              a(href="repo.html_url" target="_blank") {{ repo.full_name }}
               p.description {{ repo.description }}
-    pagenation(:page.sync="page", :disp-item-size="dispItemSize", :items="items")
+    pagenation(page.sync="page", disp-item-size="dispItemSize", items="items")
 </template>
 
 <script>

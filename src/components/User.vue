@@ -4,7 +4,7 @@
       .column.is-4.is-offset-4
         p.control.has-addons
           input.input.is-expanded(v-model="query" type="text" placeholder="Find a user" @keyup.enter="searchUser")
-          a.button.is-primary(:class="isLoading ? 'is-loading' : ''" @click="searchUser") Search
+          a.button.is-primary(class="isLoading ? 'is-loading' : ''" @click="searchUser") Search
     template(v-if="message")
       .columns
         .column.is-6.is-offset-3
@@ -18,8 +18,8 @@
               img(:src="user.avatar_url")
           .media-content
             .content
-              a(:href="user.html_url" target="_blank") {{ user.login }}
-    pagenation(:page.sync="page", :disp-item-size="dispItemSize", :items="items")
+              a(href="user.html_url" target="_blank") {{ user.login }}
+    pagenation(page.sync="page", disp-item-size="dispItemSize", items="items")
 </template>
 
 <script>
