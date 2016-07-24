@@ -45,6 +45,10 @@ module.exports = {
         loader: 'jade'
       },
       {
+        test: /\.css$/,
+        loader: 'style-loader!css-loader'
+      },
+      {
         test: /\.(sass|scss)$/,
         loader: extractTextPlugin.extract('css!sass')
       },

@@ -6,6 +6,7 @@ import App from 'App.vue'
 // Scss
 import 'stylesheets/bulma.scss'
 import 'stylesheets/app.scss'
+require('bootstrap/dist/css/bootstrap.css')
 
 // Vue Resource
 Vue.use(VueResource)

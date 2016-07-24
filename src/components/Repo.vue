@@ -3,8 +3,8 @@
     .columns
       .column.is-4.is-offset-4
         p.control.has-addons
-          input.input.is-expanded(v-model="query" type="text" placeholder="Find a repo" @keyup.enter="searchRepo")
-          a.button.is-primary(class="isLoading ? 'is-loading' : ''" @click="searchRepo") Search
+          input.form-control(v-model="query" type="text" placeholder="Find a repo" @keyup.enter="searchRepo")
+          a.btn.btn-primary(class="isLoading ? 'is-loading' : ''" @click="searchRepo") Search
     template(v-if="message")
       .columns
         .column.is-6.is-offset-3
