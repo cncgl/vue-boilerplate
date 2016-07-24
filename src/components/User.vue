@@ -1,4 +1,5 @@
 <template lang="jade">
+  // header-component
   section.section
     .columns
       .column.is-4.is-offset-4
@@ -20,11 +21,14 @@
             .content
               a(href="user.html_url" target="_blank") {{ user.login }}
     pagenation(page.sync="page", disp-item-size="dispItemSize", items="items")
+  // footer-component
 </template>
 
 <script>
 import mixinSearch from 'mixins/search'
 import pagenation from 'components/partials/Pagenation'
+import HeaderComponent from 'components/Header.vue'
+import FooterComponent from 'components/Footer.vue'
 export default {
   components: {
     pagenation
@@ -45,6 +49,10 @@ export default {
       if (this.isLoading) return
       this.search(`users?q=${this.query}`)
     }
+  },
+  components: {
+    'footer-component': FooterComponent,
+    'header-component': HeaderComponent,
   }
 }
 </script>
