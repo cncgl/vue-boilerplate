@@ -1,12 +1,12 @@
-const path = require('path')
-const webpack = require('webpack')
-const extractTextPlugin = require('extract-text-webpack-plugin')
+const path = require('path');
+const webpack = require('webpack');
+const extractTextPlugin = require('extract-text-webpack-plugin');
 
-const _project = 'vue-webpack-boilerplate'
-const _src = 'src'
-const _dist = 'dist'
-const _stylesheets = 'stylesheets'
-const _static = 'static'
+const _project = 'vue-webpack-boilerplate';
+const _src = 'src';
+const _dist = 'dist';
+const _stylesheets = 'stylesheets';
+const _static = 'static';
 
 module.exports = {
   entry: {
@@ -82,11 +82,11 @@ module.exports = {
     noInfo: true
   },
   devtool: '#source-map'
-}
+};
 
 if (process.env.NODE_ENV === 'production') {
-  module.exports.devtool = '#eval'
-  module.exports.output.publicPath = `/${_project}/${_dist}/`
+  module.exports.devtool = '#eval';
+  module.exports.output.publicPath = `/${_project}/${_dist}/`;
   // http://vue-loader.vuejs.org/en/workflow/production.html
   module.exports.plugins = (module.exports.plugins || []).concat([
     new webpack.DefinePlugin({
