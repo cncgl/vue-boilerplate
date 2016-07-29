@@ -1,4 +1,4 @@
 <template lang="jade">
   div
-    ここはヘッダー
+    |ここはヘッダー
 </template>
